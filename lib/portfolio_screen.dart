@@ -7,7 +7,7 @@ class PortfolioScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Portfolio'),
+        title: const Text('Портфель'),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.refresh)),
         ],
@@ -19,33 +19,33 @@ class PortfolioScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const _SummaryCard(
-                title: 'Portfolio value',
+                title: 'Стоимость портфеля',
                 value: '\$128,450.00',
-                accent: Colors.indigo,
+                accent: Color(0xFF7C3AED),
               ),
               const SizedBox(height: 16),
               Row(
                 children: const [
                   Expanded(
                     child: _SummaryCard(
-                      title: 'Realized PnL',
+                      title: 'Реализованный результат',
                       value: '+\$8,210.00',
-                      accent: Colors.green,
+                      accent: Color(0xFF111114),
                     ),
                   ),
                   SizedBox(width: 12),
                   Expanded(
                     child: _SummaryCard(
-                      title: 'Unrealized PnL',
+                      title: 'Нереализованный результат',
                       value: '-\$620.40',
-                      accent: Colors.red,
+                      accent: Color(0xFF7C3AED),
                     ),
                   ),
                 ],
               ),
               const SizedBox(height: 24),
               const Text(
-                'Assets',
+                'Позиции',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 12),
@@ -57,19 +57,20 @@ class PortfolioScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Recent trades',
+                    'Последние сделки',
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
-                  TextButton(onPressed: () {}, child: const Text('View all')),
+                  TextButton(onPressed: () {}, child: const Text('Все')),
                 ],
               ),
               const _TradeRow(type: 'BUY', symbol: 'BTC', amount: '\$60,000', time: '09:41'),
-              const _TradeRow(type: 'SELL', symbol: 'ETH', amount: '\$12,100', time: 'Yesterday'),
+              const _TradeRow(type: 'SELL', symbol: 'ETH', amount: '\$12,100', time: 'Вчера'),
             ],
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color(0xFF7C3AED),
         onPressed: () {},
         child: const Icon(Icons.add),
       ),

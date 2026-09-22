@@ -5,8 +5,8 @@ void main() {
   testWidgets('RiskLedger home screen shows portfolio summary', (WidgetTester tester) async {
     await tester.pumpWidget(const RiskLedgerApp());
 
-    expect(find.text('Portfolio'), findsOneWidget);
-    expect(find.text('Assets'), findsOneWidget);
-    expect(find.text('Realized PnL'), findsOneWidget);
+    expect(find.text('Портфель'), findsOneWidget);
+    expect(find.text('Позиции'), findsOneWidget);
+    expect(find.text('Реализованный результат'), findsOneWidget);
   });
 }

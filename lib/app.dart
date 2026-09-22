@@ -11,11 +11,14 @@ class RiskLedgerApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'RiskLedger Mobile',
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xFFF5F7FB),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        scaffoldBackgroundColor: const Color(0xFFFAFAFA),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF7C3AED),
+          brightness: Brightness.light,
+        ),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.indigo,
+          backgroundColor: Color(0xFF111114),
           foregroundColor: Colors.white,
         ),
       ),
